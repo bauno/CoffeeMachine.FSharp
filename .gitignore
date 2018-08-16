@@ -5,7 +5,8 @@
 
 */bin/*
 */obj/*
-*/packages/*
+packages/**
+.paket/*
 
 FSharp/bin/*
 FSharp/obj/*
