@@ -10,13 +10,15 @@ open Fake.IO.FileSystemOperators
 open Fake.IO.Globbing.Operators
 open Fake.Core.TargetOperators
 
-Target.create "Clean" (fun _ ->
+Target.create "Clean" (fun _ ->    
     !! "src/**/bin"
     ++ "src/**/obj"
     |> Shell.cleanDirs 
 )
 
 Target.create "Build" (fun _ ->
+    AssemblyInfoFile.createFSharp "./src/app/CoffeeMachine.Core/Properties/AssemblyInfo.fs"
+        [AssemblyInfo.InternalsVisibleTo "CoffeeMachine.Tests.Xunit"]
     !! "src/**/*.*proj"
     |> Seq.iter (DotNet.build id)
 )

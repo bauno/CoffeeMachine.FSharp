@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <NoWarn>NU1701</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DrinkMaker.Data.fs"/>
+    <Compile Include="PriceList.fs"/>
+    <Compile Include="DrinkMaker.OrderParser.Core.fs"/>
+    <Compile Include="DrinkMaker.OrderParser.fs"/>
+    <Compile Include="QuantityChecker.Core.fs"/>
+    <Compile Include="QuantityChecker.fs"/>
+    <Compile Include="DrinkRepository.Data.fs"/>
+    <Compile Include="DrinkRepository.Core.fs"/>
+    <Compile Include="DrinkRepository.Main.fs"/>
+    <Compile Include="DrinkMaker.Core.fs"/>
+    <Compile Include="DrinkMaker.fs"/>
+    <Compile Include="CoffeeMachine.Core.fs"/>
+    <Compile Include="CoffeeMachine.fs"/>
+    <Compile Include="Properties/AssemblyInfo.fs"/>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Chessie" Version="0.6.0"/>
+    <PackageReference Include="NamelessInteractive.FSharp.MongoDB" Version="0.0.4"/>
+    <PackageReference Include="MongoDB.Driver" Version="2.7.0"/>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0"/>
+    <PackageReference Include="MongoDB.Bson" Version="2.7.0"/>
+  </ItemGroup>
+</Project>
