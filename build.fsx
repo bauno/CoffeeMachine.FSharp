@@ -6,9 +6,17 @@ nuget Fake.DotNet.AssemblyInfoFile //"
 open Fake.Core
 open Fake.DotNet
 open Fake.IO
-open Fake.IO.FileSystemOperators
 open Fake.IO.Globbing.Operators
 open Fake.Core.TargetOperators
+
+let buildDir  = "./build/"
+let levelDir = "./levels/"
+let deployDir = "./deploy/"
+let dockerDir = "./docker/"
+let dockerDeploy = "CoffeeMachine"
+let zipFile = "CoffeeMachine.zip"
+let configFile = "CoffeeMachine.WebApi.exe.config"
+
 
 Target.create "Clean" (fun _ ->    
     !! "src/**/bin"
