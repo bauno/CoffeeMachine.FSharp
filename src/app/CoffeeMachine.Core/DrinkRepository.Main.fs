@@ -5,14 +5,13 @@ open CoffeeMachine.DrinkRepository.Core
 open System.Configuration   
 
 
-//let connectionString =  ConfigurationManager.AppSettings.Item("ConnectionString")
-let connectionString =  "Pippo"
+let connectionString =  ConfigurationManager.AppSettings.Item("ConnectionString")
 
-//let dbName = ConfigurationManager.AppSettings.Item("DbName")
-let dbName = "Pluto"
 
-// NamelessInteractive.FSharp.MongoDB.SerializationProviderModule.Register()
-// NamelessInteractive.FSharp.MongoDB.Conventions.ConventionsModule.Register()
+let dbName = ConfigurationManager.AppSettings.Item("DbName")
+
+NamelessInteractive.FSharp.MongoDB.SerializationProviderModule.Register()
+NamelessInteractive.FSharp.MongoDB.Conventions.ConventionsModule.Register()
 
 let drinkRepository = drinkRepository'' connectionString dbName
 

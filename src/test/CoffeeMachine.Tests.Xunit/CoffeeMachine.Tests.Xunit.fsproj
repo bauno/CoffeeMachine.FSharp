@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CoffeeMachine.Tests.fs" />
+    <Compile Include="DrinkMaker.Tests.fs" />
+    <Compile Include="OrderParser.Tests.fs" />
+    <Compile Include="QuantityChecker.Tests.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+    <PackageReference Include="xunit" Version="*" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+    <PackageReference Include="FsUnit.xUnit" Version="3.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\app\CoffeeMachine.Core\CoffeeMachine.Core.fsproj" />
+  </ItemGroup>
+</Project>

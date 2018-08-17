@@ -33,6 +33,7 @@ Target.create "All" ignore
 
 "Clean"
   ==> "Build"
+  ==> "Test"
   ==> "All"
 
 Target.runOrDefault "All"
