@@ -8,6 +8,8 @@
 */buid/**
 packages/**
 .paket/*
+src/docker/**
+deploy/**
 
 FSharp/bin/*
 FSharp/obj/*

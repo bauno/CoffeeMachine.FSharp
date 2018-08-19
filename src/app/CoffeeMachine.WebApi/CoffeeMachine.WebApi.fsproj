@@ -6,6 +6,7 @@
   <ItemGroup>
     <Compile Include="CoffeeMachine.RestApp.fs"/>
     <Compile Include="Program.fs"/>
+    <None Include="App.config"/>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="suave" Version="2.4.3"/>

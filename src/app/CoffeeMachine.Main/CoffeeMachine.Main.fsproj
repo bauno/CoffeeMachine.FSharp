@@ -7,10 +7,12 @@
 
   <ItemGroup>
     <Compile Include="Program.fs" />
+    <None Include="App.config"/>
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CoffeeMachine.Core\CoffeeMachine.Core.fsproj" />
+
   </ItemGroup>
 
 </Project>
