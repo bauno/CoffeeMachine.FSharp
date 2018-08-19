@@ -22,6 +22,7 @@ let configFile = "CoffeeMachine.WebApi.exe.config"
 Target.create "Clean" (fun _ ->    
     !! "src/**/bin"
     ++ "src/**/obj"
+    ++ buildDir
     |> Shell.cleanDirs 
 )
 
@@ -54,4 +55,4 @@ Target.create "All" ignore
   ==> "Deploy"
   ==> "All"
 
-Target.runOrDefault "All"
+Target.runOrDefault "Test"
