@@ -1,5 +1,4 @@
 #r "paket: nuget Fake.DotNet.Cli
-open System.Windows.Forms.ScrollableControl
 nuget Fake.IO.FileSystem
 nuget Fake.Core.Target
 nuget Fake.IO.Zip
