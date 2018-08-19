@@ -1,5 +1,4 @@
 #r "paket: nuget Fake.DotNet.Cli
-open Fake.SystemHelper
 nuget Fake.IO.FileSystem
 nuget Fake.Core.Target
 nuget Fake.DotNet.AssemblyInfoFile //"
