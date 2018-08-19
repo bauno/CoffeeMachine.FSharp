@@ -36,7 +36,7 @@ Target.create "Clean" (fun _ ->
 Target.create "Build" (fun _ ->
     AssemblyInfoFile.createFSharp "./src/app/CoffeeMachine.Core/Properties/AssemblyInfo.fs"
         [AssemblyInfo.InternalsVisibleTo "CoffeeMachine.Tests.Xunit"]
-    !! "src/**/*.*proj"
+    !! "src/app/*.fsproj"
     |> Seq.iter (DotNet.build id)
 )
 
