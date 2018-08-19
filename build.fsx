@@ -1,4 +1,5 @@
 #r "paket: nuget Fake.DotNet.Cli
+open Fake.SystemHelper
 nuget Fake.IO.FileSystem
 nuget Fake.Core.Target
 nuget Fake.DotNet.AssemblyInfoFile //"
@@ -9,7 +10,7 @@ open Fake.IO
 open Fake.IO.Globbing.Operators
 open Fake.Core.TargetOperators
 
-let buildDir  = "./build/"
+let buildDir  = "build/"
 let levelDir = "./levels/"
 let deployDir = "./deploy/"
 let dockerDir = "./docker/"
@@ -37,11 +38,20 @@ Target.create "Test" (fun _ ->
     |> Seq.iter (DotNet.test id)
 )
 
+Target.create "Deploy" (fun _ ->
+    "src/app/CoffeeMachine.Main/CoffeeMachine.Main.fsproj"
+    |> DotNet.publish (fun options ->             
+            Trace.log (sprintf "Working dir: %s" options.Common.WorkingDirectory)
+            {options with OutputPath =  Some(options.Common.WorkingDirectory + "/" +  buildDir)}
+        )
+)
+
 Target.create "All" ignore
 
 "Clean"
   ==> "Build"
   ==> "Test"
+  ==> "Deploy"
   ==> "All"
 
 Target.runOrDefault "All"
