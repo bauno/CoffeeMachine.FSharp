@@ -9,7 +9,7 @@ services:
     networks:
       - webnet    
   mongodb:
-    image: "tutum/mongodb"
+    image: "mongo"
     volumes:
       - MongoData:/data/db
     ports:

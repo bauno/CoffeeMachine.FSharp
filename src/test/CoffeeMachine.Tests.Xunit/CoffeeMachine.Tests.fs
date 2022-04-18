@@ -3,11 +3,7 @@ module CoffeeMachine.Tests
 open Xunit
 open FsUnit.Xunit
 open DrinkMaker.Data
-open CoffeeMachine.PriceList
-open CoffeeMachine.Main
-open DrinkMaker.Data
 open CoffeeMachine.Core
-open CoffeeMachine.DrinkRepository.Data
 open Chessie.ErrorHandling
 
 

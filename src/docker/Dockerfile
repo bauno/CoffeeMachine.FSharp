@@ -1,5 +1,5 @@
 # Use an official Python runtime as a base image
-FROM microsoft/dotnet:sdk
+FROM mcr.microsoft.com/dotnet/core/runtime:3.1
 
 # Set the working directory to /app
 WORKDIR /CoffeeMachine.WebApi

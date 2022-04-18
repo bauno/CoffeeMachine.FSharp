@@ -28,6 +28,13 @@ let makeBeverage' railway orderStr =
   | Bad(errors) -> fail errors.[0]
   | Ok(b,_) -> ok b
 
+let makeBeverage'' create orderStr =
+  orderStr
+  |> create
+  |> function
+  | Bad(errors) -> fail errors.[0]
+  | Ok(b,_) -> ok b
+
 let dummy1 beverage =
   beverage, beverage.Beverage = Tea
 

@@ -1,0 +1,5 @@
+{
+    "dotnet-test-explorer.testProjectPath": "src/test/**/*.@(csproj|vbproj|fsproj)",
+    // "dotnet-test-explorer.testProjectPath": "src/test/CoffeeMachine.Tests.Xunit/CoffeeMachine.Tests.Xunit.fsproj"
+    
+}

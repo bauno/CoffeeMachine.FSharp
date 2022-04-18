@@ -67,9 +67,8 @@ let ``Cannot make a beverage if something goes wrong`` () =
     match drink with
     | Bad(m) -> m.[0]
     | _ -> failwith "Error"
-
+  
   message |> should equal "0.3 Euros missing"
-
 
 
 [<Fact>]

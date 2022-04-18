@@ -21,9 +21,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Chessie" Version="0.6.0"/>
-    <PackageReference Include="MongoDB.Driver" Version="2.7.0"/>
+    <PackageReference Include="MongoDB.Driver" Version="2.10.4"/>
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0"/>
-    <PackageReference Include="MongoDB.Bson" Version="2.7.0"/>
+    <PackageReference Include="MongoDB.Bson" Version="2.10.4"/>
     <PackageReference Include="NamelessInteractive.FSharp.MongoDB" Version="0.0.4"/>
   </ItemGroup>
 </Project>

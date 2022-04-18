@@ -1,4 +1,5 @@
 #r "paket: nuget Fake.DotNet.Cli
+nuget FSharp.Core //
 nuget Fake.IO.FileSystem
 nuget Fake.Core.Target
 nuget Fake.IO.Zip

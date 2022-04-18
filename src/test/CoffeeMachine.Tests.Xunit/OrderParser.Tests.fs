@@ -35,8 +35,7 @@ let extractOk =
 let ``I should be able to parse an order`` (order: string) (bType: string) (sugar: int) (moneyInserted: float) (extraHot: bool) =
 
 
-    let bev =
-        {
+    let bev = {
         Beverage = fromString<BeverageType> bType |> extract
         ExtraHot = extraHot
         MoneyInserted = moneyInserted
