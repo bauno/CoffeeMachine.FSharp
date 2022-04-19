@@ -42,16 +42,16 @@ let makeAnotherBeverage orderStr =
     checkMoneyAndSetListPrice priceOf b
     >>= ``check that beverage makes sense``
 
-  let inline (>=>) result f  = lift f  result 
+  let inline (=>>) result f  = lift f  result 
 
   let create orderStr =
     parseOrder orderStr
     >>= ``Check that drink exists``
-    >=> putStick
+    =>> putStick
     >>= (checkMoneyAndSetListPrice priceOf)
     >>= ``check that beverage makes sense``
     >>= (checkQuantity (fun b -> isEmpty) (ignore))
-    >=> saveIntoDb 
+    =>> saveIntoDb 
 
   makeBeverage'' create
   // makeBeverage' railway
